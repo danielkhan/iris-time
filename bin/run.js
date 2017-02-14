@@ -17,6 +17,7 @@ server.on('listening', function () {
             .set('X-IRIS-API-TOKEN', config.irisApiToken)
             .end((err) => {
                 if (err) {
+                    console.log(err);
                     log.debug(err);
                     log.error('Error connecting to Iris');
                 }
