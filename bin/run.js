@@ -11,7 +11,6 @@ server.listen();
 
 server.on('listening', function () {
     log.info(`IRIS-Time is listening on ${server.address().port} in ${service.get('env')} mode.`);
-
     const announce = () => {
         request.put(`https://test-dkhan-1.herokuapp.com/service/time/${server.address().port}`)
             .set('X-IRIS-SERVICE-TOKEN', config.serviceAccessToken)
