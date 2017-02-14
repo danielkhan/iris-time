@@ -7,7 +7,7 @@ const log = config.log();
 const service = require('../server/service')(config);
 
 const server = http.createServer(service);
-server.listen();
+server.listen(process.env.PORT || null);
 
 server.on('listening', function () {
     log.info(`IRIS-Time is listening on ${server.address().port} in ${service.get('env')} mode.`);
@@ -17,7 +17,6 @@ server.on('listening', function () {
             .set('X-IRIS-API-TOKEN', config.irisApiToken)
             .end((err) => {
                 if (err) {
-                    console.log(err);
                     log.debug(err);
                     log.error('Error connecting to Iris');
                 }
