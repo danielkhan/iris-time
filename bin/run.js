@@ -23,7 +23,6 @@ server.on('listening', function () {
                     log.error(err);
                     log.error('Error connecting to Iris');
                 }
-                console.log(res);
             });
     };
     announce();
