@@ -5,7 +5,7 @@ module.exports = {
             script: 'bin/run.js',
             env_production: {
                 NODE_ENV: 'production',
-                IRIS_URL: 'http://34.251.16.136:3000/'
+                IRIS_URL: 'http://34.251.16.136:3000'
             }
         }
     ],
