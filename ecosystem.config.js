@@ -14,7 +14,7 @@ module.exports = {
             user: 'node',
             host: ['34.251.16.119', '34.250.101.115'],
             ref: 'origin/master',
-            repo: 'git@github.com:danielkhan/iris-time.git',
+            repo: 'https://github.com/danielkhan/iris-time.git',
             path: '/var/srv/production',
             'post-deploy': 'cp ../.env ./ && npm install && pm2 startOrRestart ecosystem.config.js --env production'
         }
