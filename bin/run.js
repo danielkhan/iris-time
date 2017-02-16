@@ -10,6 +10,7 @@ const server = http.createServer(service);
 server.listen(process.env.PORT || null);
 
 server.on('listening', function () {
+    console.log(process.env.IRIS_URL);
     log.info(`IRIS-Time is listening on ${server.address().port} in ${service.get('env')} mode.`);
     const announce = () => {
         request.put(`{process.env.IRIS_URL || http://127.0.0.1:3000}/service/time/${server.address().port}`)
