@@ -6,8 +6,7 @@ module.exports = {
             env_production: {
                 NODE_ENV: 'production',
                 IRIS_URL: 'http://34.251.16.136:3000'
-            },
-            exec_mode : 'cluster'
+            }
         }
     ],
     deploy: {
