@@ -9,6 +9,7 @@ module.exports = {
             }
         }
     ],
+    
     deploy: {
         production: {
             user: 'node',
